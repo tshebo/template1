@@ -13,7 +13,7 @@ function Login() {
     try {
       await signInWithEmailAndPassword(auth, data.email, data.password);
       // Redirect to home page
-      navigate("/");
+      navigate("/logged-in");
     } catch (error) {
       console.error("Error logging in:", error);
     }
