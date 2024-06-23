@@ -39,7 +39,7 @@ npm install
 To start using this template, you can follow these guidelines:
 
 1. Customize the authentication pages:
-   - Modify the `Login`, `SignUp`, and other authentication components in the `src/components` directory to fit your application's design and requirements.
+   - Modify the `Login`, `SignUp`, and `AuthContext` directory to fit your application's design and requirements.
    
 2. Define route paths and access levels:
    - Update the routing logic in the `AppRoutes` component to define the route paths and their accessibility levels based on your application's needs.
