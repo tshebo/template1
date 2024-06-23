@@ -4,15 +4,15 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import SignUp from "../pages/SignUp";
 
-//displays for every user
+//displays for unregistered/logged out user
 function PublicRoutes() {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<SignUp />} />
-        
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<SignUp />} />
+        <Route path="*" element={<Home />} />
       </Routes>
     </div>
   );
