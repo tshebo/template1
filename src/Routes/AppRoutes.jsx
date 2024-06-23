@@ -1,14 +1,24 @@
-import React from "react";
-import { BrowserRouter, Routes } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 import PublicRoutes from "./PublicRoutes";
 import PrivateRoutes from "./PrivateRoutes";
+import AdminRoutes from "./AdminRoutes"; // Ensure this is imported
 
-//routing conditions 
+// Add routing conditions 
 export default function AppRoutes() {
+  const [user, setUser] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);  
+
   return (
     <div>
       <BrowserRouter>
-        {true ? <PublicRoutes /> : <PrivateRoutes />}
+        {
+          !user ? (
+            <PublicRoutes />
+          ) : (
+            isAdmin ? <AdminRoutes /> : <PrivateRoutes />
+          )
+        }
       </BrowserRouter>
     </div>
   );
