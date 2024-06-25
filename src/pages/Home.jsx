@@ -29,7 +29,7 @@ function Home() {
   return (
     <div className="container lg (1024px)">
       <h1>HOME</h1>
-      <Nav/>
+      {/* <Nav/> */}
       <section id="home"></section>
       <section id="about"></section>
       <section id="services"></section>
