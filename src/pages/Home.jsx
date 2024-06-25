@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 import "../App.css";
 import { RiArrowDownCircleFill } from "@remixicon/react";
+import Nav from "./Nav";
 function Home() {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -26,8 +27,9 @@ function Home() {
   }, []);
 
   return (
-    <div>
+    <div className="container lg (1024px)">
       <h1>HOME</h1>
+      {/* <Nav/> */}
       <section id="home"></section>
       <section id="about"></section>
       <section id="services"></section>
